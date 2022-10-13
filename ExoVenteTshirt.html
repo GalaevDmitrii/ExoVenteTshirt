@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .code_postal {
+            width: 40px;
+        }
+
+        .but {
+            height: 30px;
+            width: 140px;
+        }
+
+        .quantite {
+            width: 150px;
+        }
+
+        .sizes {
+            margin-top: 1px;
+            width: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Client</legend>
+
+            <div>
+                <label for="Nom">Nom : </label>
+                <input placeholder="Nom" id="nom" type="text" pattern="[A-Z]+">
+            </div>
+            <Div>
+                <label for="id1">Prenom :</label>
+                <input placeholder="Prenom" type="text" id="id1" name="prenom" pattern="[A-Z]{1}[a-z]+" />
+            </Div>
+
+            <div>
+                <label for="id2">Adresse : </label>
+                <input type="text" id="id2" name="adresse" />
+            </div>
+            <div>
+                <label for="id3">Code postal : </label>
+                <input class="code_postal" type="text" id="id3" pattern="[0-9]{5}$" maxlength="5" />
+            </div>
+            <div>
+                <label for="id4">Pays : </label>
+                <input type="text" value="France" readonly>
+            </div>
+
+
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Commande</legend>
+
+            <div>
+                <label for="id5">Modele</label>
+                <input type=" text" id="id5" name="modele" value="Road 66" readonly />
+            </div>
+            <div>
+                <label for="id6">Taille : </label><br>
+                <input type="range" id="id6" name="taille" max="4" />
+                <p class="sizes">S M L XL</p>
+            </div>
+            <div>
+                <label for="id7">Quantite : </label>
+                <input class="quantite" type="number" value="1" min="1" max="165" step="3" />
+
+            </div>
+        </fieldset><br>
+        <div>
+            <input class="but" type="submit" value="Commander" />
+            <input class="but" type="reset" value="Recommencer" />
+        </div>
+    </form>
+
+
+
+
+
+
+</body>
+
+</html>
